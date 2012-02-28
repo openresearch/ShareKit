@@ -180,6 +180,11 @@
 		[mailController addAttachmentData:UIImageJPEGRepresentation(item.image, jpgQuality) mimeType:@"image/jpeg" fileName:@"Image.jpg"];
 	}
 	
+	if ([item customValueForKey:@"to"]) 
+	{
+		[mailController setToRecipients:[NSArray arrayWithObject:[item customValueForKey:@"to"]]];        
+	}
+	
 	[mailController setSubject:item.title];
 	[mailController setMessageBody:body isHTML:YES];
 			
