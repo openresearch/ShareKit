@@ -31,6 +31,11 @@
 #import "ObjectiveFlickr.h"
 #import "SHKFormOptionController.h"
 
+@protocol OFFlickrAPIRequestDelegate <NSObject>
+
+
+
+@end
 @interface SHKFlickr : SHKSharer<	OFFlickrAPIRequestDelegate,
 									SHKOAuthViewDelegate,
 									SHKFormOptionControllerOptionProvider> {
